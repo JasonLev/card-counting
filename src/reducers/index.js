@@ -1,11 +1,10 @@
-// import { combineReducers } from 'redux'
+import { combineReducers } from 'redux'
 // import cards from './cards'
-// import visibilityDisplay from './visibleDisplay'
+import visibilityDisplay from './visibleDisplay'
+import count from './count'
 
-// export default combineReducers({
+export default combineReducers({
 //   cards,
-//   visibilityDisplay
-// })
-export default (state = [], action) => {
-  return state
-}
+  visibilityDisplay,
+  count
+})
