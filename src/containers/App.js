@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import DisplayNav from './DisplayNav'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
             Counting Cards
           </h1>
         </header>
+        <DisplayNav />
       </div>
     );
   }

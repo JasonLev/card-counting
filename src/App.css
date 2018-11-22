@@ -12,3 +12,6 @@
   padding: 1em;
   margin: 0;
 }
+button:disabled {
+  cursor: not-allowed;
+}
