@@ -1,6 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import DisplayButton from './DisplayButton'
 import { Displays } from '../actions'
+
+const mapStateToProps = state => ({
+  display: state.visibilityDisplay
+})
 
 const DisplayNav = () => (
   <div>
@@ -15,5 +20,6 @@ const DisplayNav = () => (
     </DisplayButton>
   </div>
 )
-
-export default DisplayNav
+export default connect(
+  mapStateToProps
+)(DisplayNav)

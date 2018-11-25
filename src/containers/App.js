@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import GameTable from './GameTable'
+import GameDisplay from './GameDisplay'
+import DisplayNav from './DisplayNav'
 // import Instructions from '../components/Instructions'
 
 class App extends Component {
@@ -12,8 +13,9 @@ class App extends Component {
             Counting Cards
           </h1>
         </header>
+        <DisplayNav />
         {/* <Instructions />*/}
-        <GameTable />
+        <GameDisplay />
       </div>
     );
   }
