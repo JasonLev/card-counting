@@ -4,23 +4,31 @@ import { Displays } from '../actions'
 import CurrentCount from '../components/CurrentCount'
 import Cards from '../components/Cards'
 import GuessForm from '../components/GuessForm'
+import DisplayNav from './DisplayNav'
 
 const mapStateToProps = state => ({
   display: state.visibilityDisplay
 })
 
 const GameTable = props => {
-  // switch (props.dislay) {
-    // case Displays.SHOW_COUNT:
-      console.log("show count from switch");
-      return <CurrentCount />
-  //   case Displays.SHOW_DEAL:
-  //     return "Dealing"//<Cards />
-  //   case Displays.SHOW_GUESS_FORM:
-  //     return "Guessing"//<GuessForm />
-  //   default:
-  //     throw new Error('Unknown Display: ' + props.display)
-  // }
+  let display
+  switch (props.display) {
+    case Displays.SHOW_COUNT:
+      display = <CurrentCount />
+    case Displays.SHOW_DEAL:
+      display = "Dealing"//<Cards />
+    case Displays.SHOW_GUESS_FORM:
+      display = "Guessing"//<GuessForm />
+    default:
+      throw new Error('Unknown Display: ' + props.display)
+  }
+
+  return (
+    <div>
+      <DisplayNav />
+      {display}
+    </div>
+  )
 }
 
 export default connect(
