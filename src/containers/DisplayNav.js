@@ -12,8 +12,8 @@ const DisplayNav = () => (
     <DisplayButton display={Displays.SHOW_COUNT}>
       See current count
     </DisplayButton>
-    <DisplayButton display={Displays.SHOW_DEAL}>
-      Deal a card
+    <DisplayButton display={Displays.SHOW_CARDS}>
+      Cards
     </DisplayButton>
     <DisplayButton display={Displays.SHOW_GUESS_FORM}>
       Guess the count

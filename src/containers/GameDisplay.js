@@ -13,7 +13,7 @@ const GameDisplay = props => {
   switch (props.display) {
     case Displays.SHOW_COUNT:
       return <CurrentCount />
-    case Displays.SHOW_DEAL:
+    case Displays.SHOW_CARDS:
       return <Cards />
     case Displays.SHOW_GUESS_FORM:
       return <GuessForm />

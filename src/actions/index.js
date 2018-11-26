@@ -4,7 +4,7 @@ export const setVisibilityDisplay = display => ({
 })
 
 export const Displays = {
-  SHOW_DEAL: 'SHOW_DEAL',
+  SHOW_CARDS: 'SHOW_CARDS',
   SHOW_GUESS_FORM: 'SHOW_GUESS_FORM',
   SHOW_COUNT: 'SHOW_COUNT'
 }

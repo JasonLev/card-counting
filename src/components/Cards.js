@@ -7,7 +7,8 @@ const mapStateToProps = state => ({
 
 const Cards = () => (
   <div>
-    "cards"
+    <button>Shuffle/Reset</button>
+    <button>Deal a card</button>
   </div>
 )
 export default connect(
