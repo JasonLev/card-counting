@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
+import GameDisplay from './GameDisplay'
 import DisplayNav from './DisplayNav'
+// import Instructions from '../components/Instructions'
 
 class App extends Component {
   render() {
@@ -12,6 +14,8 @@ class App extends Component {
           </h1>
         </header>
         <DisplayNav />
+        {/* <Instructions />*/}
+        <GameDisplay />
       </div>
     );
   }
