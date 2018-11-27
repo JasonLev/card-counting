@@ -3,6 +3,15 @@ export const setVisibilityDisplay = display => ({
   display
 })
 
+export const makeGuess = guess => ({
+  type: 'MAKE_GUESS',
+  guess
+})
+
+export const clearGuess = () => ({
+  type: 'CLEAR_GUESS'
+})
+
 export const Displays = {
   SHOW_CARDS: 'SHOW_CARDS',
   SHOW_GUESS_FORM: 'SHOW_GUESS_FORM',
