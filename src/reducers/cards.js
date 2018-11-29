@@ -1,4 +1,4 @@
-import { CardDeck } from '../actions'
+import { CardDeck } from '../actions/cardDeck'
 
 const cards = (state = CardDeck, action) => {
   switch (action.type) {
