@@ -12,6 +12,10 @@ export const clearGuess = () => ({
   type: 'CLEAR_GUESS'
 })
 
+export const shuffle = () => ({
+  type: 'SHUFFLE_CARDS'
+})
+
 export const Displays = {
   SHOW_CARDS: 'SHOW_CARDS',
   SHOW_GUESS_FORM: 'SHOW_GUESS_FORM',
