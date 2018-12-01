@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { makeGuess } from '../actions'
-import { setVisibilityDisplay } from '../actions'
-import { Displays } from '../actions'
+import { makeGuess, setVisibilityDisplay, Displays } from '../actions'
 
 const GuessForm = ({ dispatch }) => {
   let input
