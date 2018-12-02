@@ -8,17 +8,27 @@ const mapStateToProps = state => ({
   cards: state.cards
 })
 
-const Cards = ({dispatch}, props) => {
+const mapDispatchToProps = dispatch => ({
+  onClick: () => {
+    dispatch(shuffle())
+  }
+})
+
+const Cards = props => {
+  let cards = props.cards.map(card => {
+    return <Card key={card.id} rank={card.rank} suit={card.suit} />
+  })
   return (
     <div>
-      <button onClick={() => dispatch(shuffle())}>Shuffle/Reset</button>
+      <button onClick={props.onClick}>Shuffle/Reset</button>
       <button>Deal a card</button>
-      <div>
-        {props.cards}
+      <div className="card-deck">
+        {cards}
       </div>
     </div>
   )
 }
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Cards)

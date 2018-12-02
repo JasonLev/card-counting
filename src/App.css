@@ -15,3 +15,51 @@
 button:disabled {
   cursor: not-allowed;
 }
+
+/* Cards: */
+.card-deck {
+  margin: 1em auto;
+  width: fit-content;
+}
+.card {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  background-color: #FFF;
+  border-radius: 10%;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column;
+  padding: 0.5em;
+}
+
+.card-black {
+  color: black;
+}
+
+.card-red {
+  color: red;
+}
+
+.card-rank {
+  font-size: 10vw;
+}
+
+.card-suit {
+  font-size: 5vw;
+}
+.card-tl {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.card-br {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform:rotate(-180deg);
+}
