@@ -68,11 +68,18 @@ button:disabled {
 .back {
   /* color: #fff;
   background-color: blue; */
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .flipped {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
+}
+
+.card-outline-flipped {
+  position: relative;
+  left: 300px;
+  animation-name: moveRight;
+  animation-duration: 800ms;
 }
 
 .card-black {
@@ -105,4 +112,13 @@ button:disabled {
   justify-content: flex-start;
   align-items: flex-start;
   transform:rotate(-180deg);
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

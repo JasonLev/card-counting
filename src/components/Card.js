@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Card = ({rank, suit}) => {
+const Card = ({rank, suit, flipped}) => {
   let cardColor = (suit === "♣︎" || suit === "♠︎") ? "card-black": "card-red";
+  let flipCard = flipped ? " flipped" : "";
   return (
-    <div className="card-outline">
-      <div className={"card " + cardColor}>
+    <div className={flipped ? "card-outline card-outline-flipped" : "card-outline"}>
+      <div className={"card " + cardColor + flipCard}>
         <div className="front"></div>
         <div className="back">
           <div className="card-tl">
