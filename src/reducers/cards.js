@@ -8,8 +8,12 @@ const cards = (state = CardDeck, action) => {
           ? {...card, completed: true}
           : card
       )
+    case 'REMOVE_CARD':
+      let popDeck = [...state]
+      popDeck.pop()
+      return popDeck
     case 'SHUFFLE_CARDS':
-      const deck = [...CardDeck]
+      let deck = [...CardDeck]
       for (let i = deck.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [deck[i], deck[j]] = [deck[j], deck[i]];

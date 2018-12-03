@@ -16,6 +16,21 @@ export const shuffle = () => ({
   type: 'SHUFFLE_CARDS'
 })
 
+export const dealCard = id => ({
+  type: 'DEAL_CARD',
+  id
+})
+
+export const removeCard = id => ({
+  type: 'REMOVE_CARD',
+  id
+})
+
+export const addCount = value => ({
+  type: 'ADD_COUNT',
+  value
+})
+
 export const Displays = {
   SHOW_CARDS: 'SHOW_CARDS',
   SHOW_GUESS_FORM: 'SHOW_GUESS_FORM',
