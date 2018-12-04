@@ -15,6 +15,12 @@
 button:disabled {
   cursor: not-allowed;
 }
+.button-row {
+  margin: 1em;
+}
+.button-row > button {
+  margin: 0.25em;
+}
 
 /* Cards: */
 .card-deck {
@@ -96,6 +102,7 @@ button:disabled {
 
 .card-suit {
   font-size: 5vw;
+  min-height: 7vw;
 }
 
 .card-tl {

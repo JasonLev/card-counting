@@ -22,13 +22,22 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 })
 
 const Cards = props => {
-  let cards = props.cards.map(card => {
+  let cards = props.cards.length ? props.cards.map(card => {
     return <Card key={card.id} rank={card.rank} suit={card.suit} flipped={card.completed}/>
-  })
+  }) : "No cards in the deck. Press shuffle/reset to get a new deck of cards."
+  let buttonRow = (
+    <div className="button-row">
+      <button onClick={props.onShuffle}>Shuffle/Reset</button>
+      {props.cards.length > 0 &&
+        <button onClick={() => props.onDeal(props.cards[props.cards.length - 1])}>
+          Deal a card
+        </button>
+      }
+    </div>
+  )
   return (
     <div>
-      <button onClick={props.onShuffle}>Shuffle/Reset</button>
-      <button onClick={() => props.onDeal(props.cards[props.cards.length - 1])}>Deal a card</button>
+      {buttonRow}
       <div className="card-deck">
         {cards}
       </div>
