@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     dispatch(dealCard(card.id))
     setTimeout(() => {
       dispatch(removeCard(card.id))
-    }, 3000);
+    }, 1500);
   }
 })
 
